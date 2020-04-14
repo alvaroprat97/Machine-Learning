@@ -1,0 +1,21 @@
+T_0 : Initial Tree
+T_m : Root of the tree
+
+example : we have 7 levels, and we wish to run pruning in the 3 penultimate levels
+
+for depth level (i) in desired pruning levels (4,5,6)
+	1 - Create Subtree (Left, Right) from parent tree
+	3 - Subtree (L/R) that minimises: (where j is L/R and i is the depth level)
+		alpha_(j) = (err(T_(i-1)_j,DataSet) - err(T_(i),DataSet)) / (number of leaves in T_(i) - number of leaves in T_(i-1)_j)
+	4 - Is prioritised for removal.
+	5 - Iterate for a chosen level, and remove the least information losing node (replacing it with the most occuring class)
+	
+
+# NOTE:: FUNC DEFN of ERR
+
+err(T_(i-1)_j,DataSet)
+
+T_(i-1)_j is the selected subtree from parent tree T_(i) at the ith level (depth) and left/right prune choice (j = 1 or 2).
+DataSet : CrossValidation dataset I guess
+
+what it does is it finds the error of after pruning these. Then we compare to the previous tree error : err(T_(i),DataSet)) and we compare how much info we lose. 
