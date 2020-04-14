@@ -10,6 +10,12 @@ Requirements:
 - Python 3
 - pip3
 
+1. Install dependencies
+
+Dependency management is done through pip.
+
+`pip3 install -r requirements.txt`
+
 # Description
 Code for forward and backward computations of a neural network. Specify the architecture in the hyperparameters. 
 
