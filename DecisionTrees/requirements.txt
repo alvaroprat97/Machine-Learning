@@ -1,2 +1,2 @@
 matplotlib==2.0.2 # if you want to visualise the tree
-numpy==1.13.1
+numpy==1.22.0
